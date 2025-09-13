@@ -18,6 +18,16 @@ public class Note {
         this.updatedAt = updatedAt;
     }
 
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                        ", createdAt=" + createdAt +
+                        ", title='" + title + '\'' +
+                        ", content='" + content + '\'' +
+                        ", updatedAt=" + updatedAt;
+    }
+
     public int getId() {
         return id;
     }
