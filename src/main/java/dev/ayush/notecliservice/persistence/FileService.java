@@ -1,12 +1,14 @@
 package dev.ayush.notecliservice.persistence;
 
 import dev.ayush.notecliservice.model.Note;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class FileService {
 
     // TODO: validate filePath
