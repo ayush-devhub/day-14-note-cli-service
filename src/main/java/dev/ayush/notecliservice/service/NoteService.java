@@ -23,7 +23,7 @@ public class NoteService {
         return Collections.unmodifiableList(notes);
     }
 
-    public Note updateNotes(int id, String newTitle, String newContent) {
+    public Note updateNote(int id, String newTitle, String newContent) {
         Note note = getNoteWithId(id);
         note.setTitle(newTitle);
         note.setContent(newContent);
