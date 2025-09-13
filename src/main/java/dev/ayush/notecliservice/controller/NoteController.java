@@ -3,6 +3,7 @@ package dev.ayush.notecliservice.controller;
 import dev.ayush.notecliservice.model.Note;
 import dev.ayush.notecliservice.persistence.FileService;
 import dev.ayush.notecliservice.service.NoteService;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 @Component
-public class NoteController {
+public class NoteController implements CommandLineRunner {
     private static final String FILE_PATH = "data/notes.csv";
 
     NoteService noteService;
@@ -21,7 +22,8 @@ public class NoteController {
         this.fileService = fileService;
     }
 
-    public void run() throws IOException {
+    @Override
+    public void run(String... args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         ;
         while (true) {
